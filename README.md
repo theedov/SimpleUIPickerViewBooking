@@ -1,6 +1,8 @@
 # SimpleUIPickerViewBooking
 A simple pickerview for selecting available appointment dates and times from remote JSON.
-```json
+ <p align="center">
+   <kbd>
+      ```json
 [
    {
       "day":"10.7.2020",
@@ -32,7 +34,7 @@ A simple pickerview for selecting available appointment dates and times from rem
    }
 ]
 ```
- <p align="center">
+   </kbd>
  <kbd>
    <img src="https://user-images.githubusercontent.com/30866972/87495035-c8d33b00-c693-11ea-87c6-c0adc3b2d951.png" width="200">
  </kbd>

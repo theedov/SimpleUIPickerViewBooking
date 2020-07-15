@@ -8,6 +8,6 @@
 import Foundation
 
 struct AppointmentDate {
-    var day: String?
-    var time: String?
+    var day: String
+    var time: String
 }

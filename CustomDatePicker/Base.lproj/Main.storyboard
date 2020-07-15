@@ -23,28 +23,28 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3G-TG-Zs8">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nST-AJ-ZUB">
-                                <rect key="frame" x="184" y="576" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onShowPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlL-Di-bqk"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGa-qk-TTf">
+                                <rect key="frame" x="189" y="576" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QGa-qk-TTf" firstAttribute="top" secondItem="h3G-TG-Zs8" secondAttribute="bottom" constant="20" id="1bs-4V-GmY"/>
                             <constraint firstItem="h3G-TG-Zs8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2w4-JM-7wM"/>
                             <constraint firstItem="hKo-6z-maN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MGy-bD-zBx"/>
-                            <constraint firstItem="nST-AJ-ZUB" firstAttribute="centerX" secondItem="h3G-TG-Zs8" secondAttribute="centerX" id="X9Y-80-9Yh"/>
+                            <constraint firstItem="QGa-qk-TTf" firstAttribute="centerX" secondItem="h3G-TG-Zs8" secondAttribute="centerX" id="XDu-PB-w5q"/>
                             <constraint firstItem="hKo-6z-maN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cAF-e7-vWH"/>
                             <constraint firstItem="h3G-TG-Zs8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kxT-Ql-O4H"/>
-                            <constraint firstItem="nST-AJ-ZUB" firstAttribute="top" secondItem="h3G-TG-Zs8" secondAttribute="bottom" constant="20" id="xI8-5c-T7w"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="hKo-6z-maN" id="v8m-vr-yno"/>
                         <outlet property="pickerView" destination="h3G-TG-Zs8" id="1vo-4L-PIt"/>
+                        <outlet property="selectedDateTxt" destination="QGa-qk-TTf" id="dLT-UP-CMP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

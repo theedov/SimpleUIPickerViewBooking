@@ -12,19 +12,18 @@ class ViewController: UIViewController {
     //MARK: Outlets
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var selectedDateTxt: UILabel!
     
     //MARK: Variables
     private var appointmentDays = [AppointmentDay]()
     private var appointmentTimes = [AppointmentTime]()
-    private var selectedDate = AppointmentDate()
+    private var selectedDate: AppointmentDate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getAvailableDates()
         createApointmentDatePicker()
-        
-        //print(apointment)
     }
     
     func createApointmentDatePicker() {
@@ -44,8 +43,11 @@ class ViewController: UIViewController {
                 do {
                     let decoder = JSONDecoder()
                     self.appointmentDays = try decoder.decode([AppointmentDay].self, from: data)
+                    
+                    self.selectedDate = AppointmentDate(day: self.appointmentDays[0].day, time: self.appointmentDays[0].times[0].time)
                     DispatchQueue.main.async {
                         self.pickerView.reloadAllComponents()
+                        self.selectedDateTxt.text = "\(self.selectedDate.day) \(self.selectedDate.time)"
                     }
                 } catch(let error) {
                     debugPrint(error)
@@ -58,12 +60,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    
-    @IBAction func onShowPressed(_ sender: Any) {
-        print(selectedDate)
-    }
-    
 }
 
 //MARK: Custom UIPickerView
@@ -87,12 +83,10 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
-            selectedDate.day = appointmentDays[row].day
             appointmentTimes = appointmentDays[row].times
             pickerView.reloadComponent(1)
             return appointmentDays[row].day
         case 1:
-            selectedDate.time = appointmentTimes[row].time
             return appointmentTimes[row].time
         default:
             return nil
@@ -106,9 +100,12 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 0:
             selectedDay = row
             selectedDate.day = appointmentDays[selectedDay].day
+            selectedDate.time = appointmentDays[selectedDay].times.first?.time ?? "--"
         case 1:
             selectedDate.time = appointmentDays[selectedDay].times[row].time
         default: break
         }
+        
+        selectedDateTxt.text = "\(selectedDate.day) \(selectedDate.time)"
     }
 }

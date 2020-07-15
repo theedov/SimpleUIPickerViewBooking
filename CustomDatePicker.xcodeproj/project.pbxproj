@@ -13,6 +13,10 @@
 		438B49E724BDBA0E0057BF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438B49E524BDBA0E0057BF96 /* Main.storyboard */; };
 		438B49E924BDBA0F0057BF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438B49E824BDBA0F0057BF96 /* Assets.xcassets */; };
 		438B49EC24BDBA0F0057BF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438B49EA24BDBA0F0057BF96 /* LaunchScreen.storyboard */; };
+		438B49F424BDC3310057BF96 /* ApointmentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B49F324BDC3310057BF96 /* ApointmentDate.swift */; };
+		438B49F624BDC3730057BF96 /* ApointmentDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B49F524BDC3730057BF96 /* ApointmentDay.swift */; };
+		438B49F824BDC3800057BF96 /* ApointmentTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B49F724BDC3800057BF96 /* ApointmentTime.swift */; };
+		438B49FC24BDC82A0057BF96 /* RESTFul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B49FB24BDC82A0057BF96 /* RESTFul.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		438B49E824BDBA0F0057BF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438B49EB24BDBA0F0057BF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438B49ED24BDBA0F0057BF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438B49F324BDC3310057BF96 /* ApointmentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApointmentDate.swift; sourceTree = "<group>"; };
+		438B49F524BDC3730057BF96 /* ApointmentDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApointmentDay.swift; sourceTree = "<group>"; };
+		438B49F724BDC3800057BF96 /* ApointmentTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApointmentTime.swift; sourceTree = "<group>"; };
+		438B49FB24BDC82A0057BF96 /* RESTFul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTFul.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 		438B49D324BDBA0E0057BF96 = {
 			isa = PBXGroup;
 			children = (
+				438B49F924BDC80D0057BF96 /* Utils */,
 				438B49DE24BDBA0E0057BF96 /* CustomDatePicker */,
 				438B49DD24BDBA0E0057BF96 /* Products */,
 			);
@@ -63,8 +72,27 @@
 				438B49E824BDBA0F0057BF96 /* Assets.xcassets */,
 				438B49EA24BDBA0F0057BF96 /* LaunchScreen.storyboard */,
 				438B49ED24BDBA0F0057BF96 /* Info.plist */,
+				438B49F324BDC3310057BF96 /* ApointmentDate.swift */,
+				438B49F524BDC3730057BF96 /* ApointmentDay.swift */,
+				438B49F724BDC3800057BF96 /* ApointmentTime.swift */,
 			);
 			path = CustomDatePicker;
+			sourceTree = "<group>";
+		};
+		438B49F924BDC80D0057BF96 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				438B49FA24BDC8170057BF96 /* Networking */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		438B49FA24BDC8170057BF96 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				438B49FB24BDC82A0057BF96 /* RESTFul.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438B49F624BDC3730057BF96 /* ApointmentDay.swift in Sources */,
 				438B49E424BDBA0E0057BF96 /* ViewController.swift in Sources */,
 				438B49E024BDBA0E0057BF96 /* AppDelegate.swift in Sources */,
+				438B49F424BDC3310057BF96 /* ApointmentDate.swift in Sources */,
+				438B49FC24BDC82A0057BF96 /* RESTFul.swift in Sources */,
 				438B49E224BDBA0E0057BF96 /* SceneDelegate.swift in Sources */,
+				438B49F824BDC3800057BF96 /* ApointmentTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 727Q9XPG67;
 				INFOPLIST_FILE = CustomDatePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.CustomDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 727Q9XPG67;
 				INFOPLIST_FILE = CustomDatePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.CustomDatePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

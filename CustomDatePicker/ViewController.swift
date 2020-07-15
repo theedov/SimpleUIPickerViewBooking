@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //MARK: Variables
-    private var apointmentDays = [ApointmentDay]()
-    private var apointmentTimes = [ApointmentTime]()
-    private var selectedDate = ApointmentDate()
+    private var appointmentDays = [AppointmentDay]()
+    private var appointmentTimes = [AppointmentTime]()
+    private var selectedDate = AppointmentDate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             case .success(let data):
                 do {
                     let decoder = JSONDecoder()
-                    self.apointmentDays = try decoder.decode([ApointmentDay].self, from: data)
+                    self.appointmentDays = try decoder.decode([AppointmentDay].self, from: data)
                     DispatchQueue.main.async {
                         self.pickerView.reloadAllComponents()
                     }
@@ -75,9 +75,9 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case 0:
-            return apointmentDays.count
+            return appointmentDays.count
         case 1:
-            return apointmentTimes.count
+            return appointmentTimes.count
         default:
             return 0
         }
@@ -87,13 +87,13 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
-            selectedDate.day = apointmentDays[row].day
-            apointmentTimes = apointmentDays[row].times
+            selectedDate.day = appointmentDays[row].day
+            appointmentTimes = appointmentDays[row].times
             pickerView.reloadComponent(1)
-            return apointmentDays[row].day
+            return appointmentDays[row].day
         case 1:
-            selectedDate.time = apointmentTimes[row].time
-            return apointmentTimes[row].time
+            selectedDate.time = appointmentTimes[row].time
+            return appointmentTimes[row].time
         default:
             return nil
         }
@@ -105,9 +105,9 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         switch component {
         case 0:
             selectedDay = row
-            selectedDate.day = apointmentDays[selectedDay].day
+            selectedDate.day = appointmentDays[selectedDay].day
         case 1:
-            selectedDate.time = apointmentDays[selectedDay].times[row].time
+            selectedDate.time = appointmentDays[selectedDay].times[row].time
         default: break
         }
     }

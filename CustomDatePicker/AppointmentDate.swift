@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ApointmentDate {
+struct AppointmentDate {
     var day: String?
     var time: String?
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ApointmentTime: Codable {
+struct AppointmentTime: Codable {
     let time: String
 }

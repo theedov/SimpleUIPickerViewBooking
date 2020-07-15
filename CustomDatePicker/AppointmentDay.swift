@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ApointmentDay: Codable {
+struct AppointmentDay: Codable {
     let day: String
-    let times: [ApointmentTime]
+    let times: [AppointmentTime]
 }

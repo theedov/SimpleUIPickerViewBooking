@@ -48,6 +48,7 @@
 		438B49D324BDBA0E0057BF96 = {
 			isa = PBXGroup;
 			children = (
+				438B49FD24BE9EFE0057BF96 /* Model */,
 				438B49F924BDC80D0057BF96 /* Utils */,
 				438B49DE24BDBA0E0057BF96 /* CustomDatePicker */,
 				438B49DD24BDBA0E0057BF96 /* Products */,
@@ -72,9 +73,6 @@
 				438B49E824BDBA0F0057BF96 /* Assets.xcassets */,
 				438B49EA24BDBA0F0057BF96 /* LaunchScreen.storyboard */,
 				438B49ED24BDBA0F0057BF96 /* Info.plist */,
-				438B49F324BDC3310057BF96 /* AppointmentDate.swift */,
-				438B49F524BDC3730057BF96 /* AppointmentDay.swift */,
-				438B49F724BDC3800057BF96 /* AppointmentTime.swift */,
 			);
 			path = CustomDatePicker;
 			sourceTree = "<group>";
@@ -93,6 +91,16 @@
 				438B49FB24BDC82A0057BF96 /* RESTFul.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		438B49FD24BE9EFE0057BF96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				438B49F324BDC3310057BF96 /* AppointmentDate.swift */,
+				438B49F524BDC3730057BF96 /* AppointmentDay.swift */,
+				438B49F724BDC3800057BF96 /* AppointmentTime.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

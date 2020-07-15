@@ -2,34 +2,34 @@
 A simple pickerview for selecting available appointment dates and times from remote JSON.
 ```json
 [
-{
-day: "10.7.2020",
-times: [
-{
-time: "10:00"
-},
-{
-time: "11:00"
-},
-{
-time: "12:00"
-}
-]
-},
-{
-day: "11.7.2020",
-times: [
-{
-time: "9:00"
-},
-{
-time: "13:00"
-},
-{
-time: "18:00"
-}
-]
-}
+   {
+      "day":"10.7.2020",
+      "times":[
+         {
+            "time":"10:00"
+         },
+         {
+            "time":"11:00"
+         },
+         {
+            "time":"12:00"
+         }
+      ]
+   },
+   {
+      "day":"11.7.2020",
+      "times":[
+         {
+            "time":"9:00"
+         },
+         {
+            "time":"13:00"
+         },
+         {
+            "time":"18:00"
+         }
+      ]
+   }
 ]
 ```
  <p align="center">

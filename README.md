@@ -39,9 +39,3 @@ A simple pickerview for selecting available appointment dates and times from rem
    }
 ]
 ```
-
-## Contact Info:
-- Email: bogdan@dovgopol.dev
-- Web: [dovgopol.dev](https://dovgopol.dev)
-
-# Thanks for stopping by!
